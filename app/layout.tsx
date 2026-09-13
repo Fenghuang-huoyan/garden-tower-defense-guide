@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Fredoka } from "next/font/google";
 import { site } from "@/config/site.config";
+import { Nav, Footer } from "@/components/Chrome";
+import "./globals.css";
 
 const display = Fredoka({ subsets: ["latin"], weight: ["600", "700"], variable: "--font-display" });
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
-import { Nav, Footer } from "@/components/Chrome";
-import "./globals.css";
 
 /** SEO 基础元数据由配置层自动生成，不手写。 */
 export const metadata: Metadata = {
