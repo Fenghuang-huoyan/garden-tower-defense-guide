@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Fredoka } from "next/font/google";
 import { site } from "@/config/site.config";
+
+const display = Fredoka({ subsets: ["latin"], weight: ["600", "700"], variable: "--font-display" });
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 import { Nav, Footer } from "@/components/Chrome";
@@ -13,20 +16,21 @@ export const metadata: Metadata = {
   description: site.meta.description,
   keywords: site.meta.keywords,
   alternates: { canonical: "/" },
-  openGraph: { title: site.meta.title, description: site.meta.description, url: site.baseUrl, siteName: site.siteName, type: "website" },
+  openGraph: { title: site.meta.title, description: site.meta.description, url: site.baseUrl, siteName: site.siteName, type: "website", images: [site.hero.image.src] },
+  icons: { apple: site.logo },
 };
 
-/** 主题色集中在配置层，这里转成 CSS 变量，代码里不写死任何颜色。 */
+/** 主题色集中在配置层，这里转成 CSS 变量（camelCase 键 → --kebab-case），代码里不写死任何颜色。 */
 function themeVars() {
   const { light, dark } = site.theme;
   const toVars = (t: Record<string, string>) =>
-    `--theme:${t.theme};--theme-light:${t.themeLight};--bg:${t.bg};--fg:${t.fg};--muted:${t.muted};--card:${t.card};--border:${t.border};`;
+    Object.entries(t).map(([k, v]) => `--${k.replace(/[A-Z]/g, (c) => "-" + c.toLowerCase())}:${v};`).join("");
   return `:root{${toVars(light)}}@media (prefers-color-scheme:dark){:root{${toVars(dark)}}}`;
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang={site.i18n.defaultLocale}>
+    <html lang={site.i18n.defaultLocale} className={display.variable}>
       <head><style dangerouslySetInnerHTML={{ __html: themeVars() }} /></head>
       <body className="bg-[hsl(var(--bg))] text-[hsl(var(--fg))] antialiased">
         <Nav />

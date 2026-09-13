@@ -1,17 +1,20 @@
 /** 框架层：导航与页脚。三种页型共用，换游戏时一行都不用改。 */
 import Link from "next/link";
+import Image from "next/image";
 import { site } from "@/config/site.config";
 import { getNavCategories } from "@/lib/content";
 
 export function Nav() {
   const cats = getNavCategories();
   return (
-    <header className="sticky top-0 z-50 border-b border-[hsl(var(--border))] bg-[hsl(var(--bg))]/90 backdrop-blur">
-      <nav className="mx-auto flex max-w-5xl items-center gap-6 px-4 py-3">
-        <Link href="/" className="font-semibold text-[hsl(var(--theme))]">
+    <header className="sticky top-0 z-50 border-b-4 border-[hsl(var(--theme))] bg-[hsl(var(--card))]/95 backdrop-blur">
+      <nav className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-6 gap-y-2 px-4 py-3">
+        <Link href="/" className="font-display flex shrink-0 items-center gap-2 text-lg font-bold text-[hsl(var(--theme))]">
+          <Image src={site.logo} alt="" width={32} height={32} className="rounded-lg" />
           {site.siteName}
         </Link>
-        <ul className="flex flex-wrap gap-4 text-sm">
+        {/* 手机端单行横滑，避免吸顶导航被挤成竖列占满屏幕 */}
+        <ul className="flex w-full gap-4 overflow-x-auto whitespace-nowrap text-sm sm:w-auto sm:flex-1 sm:flex-wrap sm:whitespace-normal">
           {cats.map((c) => (
             <li key={c.slug}>
               <Link href={`/${c.slug}`} className="text-[hsl(var(--muted))] hover:text-[hsl(var(--fg))]">
@@ -35,7 +38,7 @@ export function Footer() {
   ].filter(Boolean) as { label: string; href: string }[];
 
   return (
-    <footer className="mt-20 border-t border-[hsl(var(--border))] bg-[hsl(var(--card))]">
+    <footer className="mt-20 border-t-4 border-[hsl(var(--theme))] bg-[hsl(var(--card))]">
       <div className="mx-auto max-w-5xl px-4 py-10 text-sm">
         <h2 className="font-semibold">{footer.aboutTitle}</h2>
         <p className="mt-2 max-w-2xl text-[hsl(var(--muted))]">{footer.about}</p>

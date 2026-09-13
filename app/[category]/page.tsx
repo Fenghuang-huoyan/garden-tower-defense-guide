@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { site } from "@/config/site.config";
@@ -36,10 +37,17 @@ export default async function CategoryPage({ params }: Props) {
       <ul className="mt-8 grid gap-4 sm:grid-cols-2">
         {docs.map((d) => (
           <li key={d.slug}>
-            <Link href={`/${d.category}/${d.slug}`} className="block rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] p-5 hover:border-[hsl(var(--theme))]">
-              <h2 className="font-semibold">{d.title}</h2>
-              <p className="mt-1 text-sm text-[hsl(var(--muted))]">{d.description}</p>
-              {d.updated && <p className="mt-2 text-xs text-[hsl(var(--muted))]">Updated {d.updated}</p>}
+            <Link href={`/${d.category}/${d.slug}`} className="block h-full overflow-hidden rounded-2xl border border-b-4 border-[hsl(var(--border))] bg-[hsl(var(--card))] transition hover:-translate-y-0.5 hover:border-[hsl(var(--theme))]">
+              {d.image && (
+                <div className="relative aspect-[16/9]">
+                  <Image src={d.image} alt="" fill sizes="(max-width: 640px) 100vw, 490px" className="object-cover" />
+                </div>
+              )}
+              <div className="p-5">
+                <h2 className="text-lg font-bold">{d.title}</h2>
+                <p className="mt-1 text-sm text-[hsl(var(--muted))]">{d.description}</p>
+                {d.updated && <p className="mt-2 text-xs text-[hsl(var(--muted))]">Updated {d.updated}</p>}
+              </div>
             </Link>
           </li>
         ))}

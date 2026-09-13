@@ -19,6 +19,8 @@ export type Doc = {
   description: string;
   keyword: string;
   updated: string;
+  /** 卡片配图（可选，public/ 下路径）；不填则用所属分类的 image */
+  image: string;
   /** 事实来源，至少 1 条。空数组会在构建时报错。 */
   sources: { label: string; url: string }[];
   body: string;
@@ -58,6 +60,7 @@ export function getAllDocs(locale: string = site.i18n.defaultLocale): Doc[] {
         description: data.description ?? "",
         keyword: data.keyword ?? data.title ?? slug,
         updated: data.updated ?? "",
+        image: data.image ?? categoryImage(category),
         sources,
         body: content,
       });
@@ -82,4 +85,9 @@ export function getNavCategories(locale?: string) {
 
 export function categoryLabel(slug: string) {
   return site.categories.find((c) => c.slug === slug)?.label ?? slug;
+}
+
+export function categoryImage(slug: string): string {
+  const cat: { slug: string; image?: string } | undefined = site.categories.find((c) => c.slug === slug);
+  return cat?.image ?? "";
 }
