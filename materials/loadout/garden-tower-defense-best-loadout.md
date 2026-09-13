@@ -2,7 +2,23 @@
 
 关键词：garden tower defense best loadout（分类：Loadout，排名类）
 
-调研日期：2026-09-13
+调研日期：2026-09-13（2026-09-13 二次更新：用户批准扩量后补第二来源）
+
+## 补充：第二来源（YouTube 实测视频）
+
+视频：《Top 3 Best Starter Units for All Gamemodes in Garden Tower Defense》
+频道 RDO，30,470 次观看，发布于 2026-03-27，
+`https://www.youtube.com/watch?v=vZ4njqDr2ws`
+
+通过浏览器打开视频页、抓取 YouTube `timedtext` 字幕接口拿到真实自动字幕文本
+（不是 WebSearch 摘要），PvP 章节原话："the third best starter to be using in this
+game mode is going to be the Glowthorn... It does the 3,500 DPS per unit, full
+electric... This thing is incredible to be using."
+
+支撑结论：Glowthorn 是一个有具名、有发布日期、有播放量的创作者实测推荐的 PvP
+起手单位，DPS 数字（3500）来自创作者自述，未与 Fandom wiki 交叉核实（Glowthorn
+还没进入本项目的已核实单位池）。已如实标注为"创作者自述，非 wiki 核实"，不混同
+为已核实的客观数值。
 
 ## 调研结果：没找到满足出处标准的具体阵容排名
 

@@ -2,7 +2,23 @@
 
 关键词：garden tower defense best pvp team（分类：PvP，排名类）
 
-调研日期：2026-09-13
+调研日期：2026-09-13（2026-09-13 二次更新：用户批准扩量后补第二来源）
+
+## 补充：第二来源（YouTube 实测视频）
+
+视频：《The BEST PvP Guide After the Update | Garden Tower Defense 1.47》
+频道 RDO（专注本游戏内容，152条视频），21,871 次观看，发布于 2026-04-22，
+`https://www.youtube.com/watch?v=d_tA63dtd8M`
+
+通过 YouTube `timedtext` 字幕接口拿到真实字幕，原话："Starting off with the
+best loadout in PVP, I have the snowmobile shoveler as a starter. I have
+Infectia as my main AoE. I have my egg basket stem as my slowing unit,
+Confusioflora as my stall, and then another bunny barrel for AoE as well."
+
+支撑结论：给出一个具名、有出处的 PvP 五件套阵容（Snowmobile Shoveler 起手、
+Infectia 主AoE、Egg Basket Stem 减速、Confusioflora 拉扯、Bunny Barrel 副AoE）。
+这五个单位都不在本项目已核实池里，如实标注为"创作者自述，未与 wiki 交叉核实"，
+不当作客观数值使用。
 来源：`https://gtd.fandom.com/wiki/PvP_Mode`（游戏官方 Fandom wiki，机制描述可直接
 采信，属于"游戏内客观规则"，不是排名断言）
 

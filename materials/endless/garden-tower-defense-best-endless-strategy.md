@@ -2,7 +2,23 @@
 
 关键词：garden tower defense best endless strategy（分类：Endless，排名类）
 
-调研日期：2026-09-13
+调研日期：2026-09-13（2026-09-13 二次更新：用户批准扩量后补第二来源）
+
+## 补充：第二来源（YouTube 实测视频）
+
+视频：《Endless Mode Is Actually Worth Playing Now… Garden Tower Defense 1.41》
+频道 RDO，约 19,000 次观看，发布于约 2026-05，
+`https://www.youtube.com/watch?v=xoE2kkCvMtk`
+
+通过 YouTube `timedtext` 字幕接口拿到真实字幕（注意：视频开头有一段贴片广告
+字幕，已排除，取的是正片内容），原话："Endless used to give seeds every 10
+waves... In the current state of the game, endless gives those types of rewards
+per wave with scaling depending on the map... Garden now gives around 40 seeds
+per wave after wave 21 and around 100 seeds per wave after wave 1,001."
+
+支撑结论：确认 Endless 模式的奖励发放机制从"每10波结算一次"改成了"每波结算"，
+且不同地图速率不同,这条印证了 Fandom wiki 里"奖励在1000波后封顶"的说法，并给出
+了 Garden 这张图的具体数字。
 来源：`https://gtd.fandom.com/wiki/Endless_Mode`（官方 Fandom wiki）
 
 ## 核实过的机制（官方数据）

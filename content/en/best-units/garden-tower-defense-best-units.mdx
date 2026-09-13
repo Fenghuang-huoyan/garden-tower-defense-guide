@@ -12,6 +12,10 @@ sources:
     url: "https://gtd.fandom.com/wiki/Rafflesia"
   - label: "Garden Tower Defense Wiki (Fandom) — Beehive"
     url: "https://gtd.fandom.com/wiki/Beehive"
+  - label: "Garden Tower Defense Wiki (Fandom) — Stun Flower"
+    url: "https://gtd.fandom.com/wiki/Stun_Flower"
+  - label: "Garden Tower Defense Wiki (Fandom) — Confusion Plant"
+    url: "https://gtd.fandom.com/wiki/Confusion_Plant"
   - label: "Garden Tower Defense Wiki (Fandom) — Golem"
     url: "https://gtd.fandom.com/wiki/Golem"
   - label: "Garden Tower Defense Wiki (Fandom) — Astraflora"
@@ -35,22 +39,32 @@ actually still get from ones that are historical strength references only.
 
 ## Currently obtainable, ranked by DPS + cost efficiency combined
 
+Only units with a Cost Efficiency figure the wiki explicitly states are ranked here — we don't
+calculate our own (the wiki's formula divides max DPS by cumulative upgrade cost across all 5
+levels, not just the base placement cost, so a guessed calculation would likely be wrong).
+
 | Rank | Unit | Rarity | Max DPS | Cost Efficiency (DPS per 1000 spent) | How to get it |
 |---|---|---|---|---|---|
 | 1 | Rafflesia | Godly | 1500 | **162.2** — highest verified so far | Mystery Trader shop, 20% stock chance |
 | 2 | Venus Flytrap | Godly | 3750 | 71.9 | Enchanted Summon crate, 0.01% chance |
-| 3 | Beehive | Godly | ~900 (computed) | 32.1 | Bee Summon, 0.01% chance |
-| 4 | Bouncing Shroom | Godly | 3200 (splash/AoE) | 22.1 | Greenhouse Summon, 0.005% chance |
+| 3 | Stun Flower | Godly | 450 | 38.3 | Tropical Summon, 0.14% chance |
+| 4 | Beehive | Godly | ~900 (computed) | 32.1 | Bee Summon, 0.01% chance |
+| 5 | Bouncing Shroom | Godly | 3200 (splash/AoE) | 22.1 | Greenhouse Summon, 0.005% chance |
+| 6 | Confusion Plant | Godly | 734 | 19.3 | Tropical Summon, 0.01% chance |
 
 These aren't strictly "better/worse" in a single dimension — they fill different roles:
 
 - **Rafflesia** is a trap unit (attaches to a mob as it passes, drops off on death, reattaches)
   with by far the best value per point spent of anything verified so far.
 - **Venus Flytrap** has the best single-target cost efficiency among the pure-attacker units.
+- **Stun Flower** stuns enemies on hit — the only obtainable crowd-control unit with a stated
+  Cost Efficiency figure, filling the role Golem used to before it was discontinued.
 - **Beehive** is a spawner with infinite range — it summons bees rather than attacking directly,
   and the wiki itself flags its stat table as possibly out of date.
 - **Bouncing Shroom** trades cost efficiency for area damage (bounces down the track, radius 9),
   making it better against grouped enemies rather than a single high-value target.
+- **Confusion Plant** turns enemies around to walk backward — a different kind of crowd control
+  than a stun, useful for buying time rather than locking a target down.
 
 ## No longer obtainable (historical reference only)
 
@@ -64,9 +78,9 @@ not a support/buff unit, despite some secondhand summaries describing it that wa
 
 ## 待确认
 
-- Only four units have been individually verified against the wiki so far. The full "best
-  units" candidate pool (across all currently-obtainable Godly and Exclusive units) has not
-  been checked yet — more will be added as they're verified.
+- 23 units have been individually verified against the wiki so far (20 obtainable, 3
+  discontinued), out of 353 total in the game. Only 6 of those 20 have a stated Cost Efficiency
+  figure — the full "best units" candidate pool has not been checked yet.
 - No creator-tested video or official Discord consensus has been checked for this category yet.
 
 We're intentionally listing fewer units with real numbers rather than a longer list borrowed
