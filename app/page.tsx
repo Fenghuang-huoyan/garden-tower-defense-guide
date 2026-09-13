@@ -1,69 +1,66 @@
-import Image from "next/image";
+import Link from "next/link";
+import { site } from "@/config/site.config";
 
+/** 首页承接主游戏词。区块顺序对齐手册关卡 3 的结构：hero / start / aboutGame / finalCta。 */
 export default function Home() {
+  const { hero, start, aboutGame, finalCta } = site;
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="mx-auto max-w-5xl px-4">
+      <section className="py-14">
+        <p className="text-sm uppercase tracking-wide text-[hsl(var(--theme))]">{hero.eyebrow}</p>
+        {/* 全站有且仅有这一个 H1 */}
+        <h1 className="mt-2 text-4xl font-bold sm:text-5xl">{hero.title}</h1>
+        <p className="mt-4 max-w-2xl text-lg text-[hsl(var(--muted))]">{hero.description}</p>
+        <ul className="mt-6 flex flex-wrap gap-2">
+          {hero.stats.map((s) => (
+            <li key={s} className="rounded-full border border-[hsl(var(--border))] bg-[hsl(var(--card))] px-3 py-1 text-sm">{s}</li>
+          ))}
+        </ul>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <Link href={hero.primaryCta.href} className="rounded-lg bg-[hsl(var(--theme))] px-5 py-2.5 font-medium text-white">{hero.primaryCta.label}</Link>
+          <Link href={hero.secondaryCta.href} className="rounded-lg border border-[hsl(var(--border))] px-5 py-2.5 font-medium">{hero.secondaryCta.label}</Link>
+          <Link href={hero.tertiaryCta.href} className="rounded-lg border border-[hsl(var(--border))] px-5 py-2.5 font-medium">{hero.tertiaryCta.label}</Link>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="py-10">
+        <p className="text-sm uppercase tracking-wide text-[hsl(var(--theme))]">{start.eyebrow}</p>
+        <h2 className="mt-2 text-2xl font-bold">{start.title}</h2>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          {start.cards.map((c) => (
+            <Link key={c.number} href={c.href} className="rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] p-5 hover:border-[hsl(var(--theme))]">
+              <span className="text-sm font-semibold text-[hsl(var(--theme))]">{c.number}</span>
+              <h3 className="mt-1 font-semibold">{c.title}</h3>
+              <p className="mt-1 text-sm text-[hsl(var(--muted))]">{c.description}</p>
+            </Link>
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="py-10">
+        <h2 className="text-2xl font-bold">{aboutGame.title}</h2>
+        {aboutGame.paragraphs.map((p) => (
+          <p key={p.slice(0, 24)} className="mt-3 max-w-3xl text-[hsl(var(--muted))]">{p}</p>
+        ))}
+        <dl className="mt-6 grid gap-3 sm:grid-cols-3">
+          {aboutGame.stats.map((s) => (
+            <div key={s.label} className="rounded-lg border border-[hsl(var(--border))] p-4">
+              <dt className="text-sm text-[hsl(var(--muted))]">{s.label}</dt>
+              <dd className="mt-1 font-medium">{s.value}</dd>
+            </div>
+          ))}
+        </dl>
+        <Link href={aboutGame.cta.href} className="mt-6 inline-block text-[hsl(var(--theme))] hover:underline">{aboutGame.cta.label} →</Link>
+      </section>
+
+      <section className="my-10 rounded-2xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] p-8">
+        <h2 className="text-2xl font-bold">{finalCta.title}</h2>
+        <p className="mt-2 max-w-2xl text-[hsl(var(--muted))]">{finalCta.description}</p>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Link href={finalCta.primary.href} className="rounded-lg bg-[hsl(var(--theme))] px-5 py-2.5 font-medium text-white">{finalCta.primary.label}</Link>
+          <a href={finalCta.secondary.href} rel="noopener noreferrer" className="rounded-lg border border-[hsl(var(--border))] px-5 py-2.5 font-medium">{finalCta.secondary.label}</a>
+        </div>
+      </section>
+    </main>
   );
 }
