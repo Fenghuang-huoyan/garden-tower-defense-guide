@@ -14,6 +14,20 @@
       "indexedDate": null,
       "lastReviewDate": null,
       "status": "observing"
+    },
+    {
+      "name": "King of Jade: Stone Tycoon Guide",
+      "gameKeyword": "king of jade stone tycoon",
+      "platform": "Steam",
+      "domain": "kingofjadeguide.wiki",
+      "repo": "Fenghuang-huoyan/king-of-jade-stone-tycoon-guide",
+      "launchDate": "2026-09-15",
+      "hasCodesPage": false,
+      "codesUrl": null,
+      "indexed": false,
+      "indexedDate": null,
+      "lastReviewDate": null,
+      "status": "observing"
     }
   ],
   "log": []
