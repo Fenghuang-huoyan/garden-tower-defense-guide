@@ -28,6 +28,9 @@ const IMG = {
 export const site = {
   // ---- 基本信息 ----
   gameName: "Garden Tower Defense",
+  // 隐私政策/条款页的免责声明用（"不隶属于开发商或 XX 公司"）；换非 Roblox 游戏时必改，
+  // 否则这句免责声明会指名一个跟这个游戏无关的平台方，是错误陈述，不是小事
+  platformOwner: "Roblox Corporation",
   siteName: "Garden Tower Defense Guide",
   // 导航 logo 与 apple icon；/favicon.ico 放在 public/ 根目录
   logo: "/images/logo.png",

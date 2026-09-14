@@ -30,7 +30,7 @@ export default function TermsOfService() {
           <h2 className="text-xl font-bold">Not an official site</h2>
           <p className="mt-2 text-[hsl(var(--muted))]">
             {site.siteName} is an independent, fan-made reference and is not affiliated with,
-            endorsed by, or operated by the game&apos;s developer or Roblox Corporation. All game
+            endorsed by, or operated by the game&apos;s developer or {site.platformOwner}. All game
             names, images, and trademarks belong to their respective owners.
           </p>
         </section>

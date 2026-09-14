@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
           <h2 className="text-xl font-bold">Overview</h2>
           <p className="mt-2 text-[hsl(var(--muted))]">
             {site.siteName} ({site.baseUrl}) is a fan-made reference site and is not affiliated
-            with the game&apos;s developer or Roblox Corporation. This policy explains what
+            with the game&apos;s developer or {site.platformOwner}. This policy explains what
             information is collected when you visit and how it is used.
           </p>
         </section>
