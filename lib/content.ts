@@ -87,6 +87,11 @@ export function categoryLabel(slug: string) {
   return site.categories.find((c) => c.slug === slug)?.label ?? slug;
 }
 
+/** 透明背景的单位立绘用 "contain"（不裁切），风景照默认 "cover"（铺满）。 */
+export function categoryImageFit(slug: string): "cover" | "contain" {
+  return site.categories.find((c) => c.slug === slug)?.imageFit ?? "cover";
+}
+
 export function categoryImage(slug: string): string {
   const cat: { slug: string; image?: string } | undefined = site.categories.find((c) => c.slug === slug);
   return cat?.image ?? "";

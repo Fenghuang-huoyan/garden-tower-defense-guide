@@ -3,14 +3,26 @@
  * 字段结构刻意对齐《8月航海》手册关卡 3 的 ChatGPT 调研提示词输出的 JSON，
  * 这样手册流程产出的素材可以直接填进来，不用二次转换。
  */
-/** image：分类卡片配图，放在 public/ 下的路径；内页 frontmatter 的 image 优先于它 */
-export type NavCategory = { slug: string; label: string; image?: string };
+/**
+ * image：分类卡片配图，放在 public/ 下的路径；内页 frontmatter 的 image 优先于它
+ * imageFit："cover"（默认）铺满卡片，适合风景/场景照；"contain" 居中不裁切，
+ * 给透明背景的单位立绘用——铺满会把方形小图硬拉伸/裁得只剩局部，很难看
+ */
+export type NavCategory = { slug: string; label: string; image?: string; imageFit?: "cover" | "contain" };
 
-// ---- 图片（官方宣传图自托管在 public/，Roblox CDN 链接带 180DAY- 前缀会过期，不能热链）----
+// ---- 图片（官方宣传图 + Fandom wiki 单位立绘，均已自托管到 public/，不热链）----
+// 3 张官方宣传图（风景/场景）+ 6 张单位渲染图（透明背景），共 9 张按内容相关性分配到
+// 16 个分类，避免只有 3 张图轮流复用导致的"到处重复"观感（2026-09-14 用户反馈后修）。
 const IMG = {
   sunflowers: "/images/official/roblox/hero.png",
   tower: "/images/official/roblox/promo-2.png",
   pepper: "/images/official/roblox/promo-3.png",
+  golem: "/images/units/golem.png",
+  venusFlytrap: "/images/units/venus-flytrap.png",
+  rafflesia: "/images/units/rafflesia.png",
+  farmer: "/images/units/farmer.png",
+  moneyTree: "/images/units/money-tree.png",
+  beehive: "/images/units/beehive.png",
 };
 
 export const site = {
@@ -62,22 +74,22 @@ export const site = {
 
   // ---- 导航分类（对应 content/<locale>/<category>/ 目录，对齐 keywords.json 16 个分类）----
   categories: [
-    { slug: "codes", label: "Codes", image: IMG.sunflowers },
-    { slug: "values", label: "Values", image: IMG.pepper },
-    { slug: "tier-list", label: "Tier List", image: IMG.tower },
-    { slug: "units", label: "Units", image: IMG.tower },
-    { slug: "best-units", label: "Best Units", image: IMG.pepper },
-    { slug: "best-dps", label: "Best DPS", image: IMG.pepper },
+    { slug: "codes", label: "Codes", image: IMG.tower },
+    { slug: "values", label: "Values", image: IMG.rafflesia, imageFit: "contain" },
+    { slug: "tier-list", label: "Tier List", image: IMG.golem, imageFit: "contain" },
+    { slug: "units", label: "Units", image: IMG.venusFlytrap, imageFit: "contain" },
+    { slug: "best-units", label: "Best Units", image: IMG.beehive, imageFit: "contain" },
+    { slug: "best-dps", label: "Best DPS", image: IMG.venusFlytrap, imageFit: "contain" },
     { slug: "plants", label: "Plants", image: IMG.sunflowers },
-    { slug: "loadout", label: "Loadout", image: IMG.tower },
-    { slug: "pvp", label: "PvP", image: IMG.pepper },
-    { slug: "endless", label: "Endless", image: IMG.sunflowers },
-    { slug: "early-game", label: "Early Game", image: IMG.sunflowers },
-    { slug: "money-farm", label: "Money Farm", image: IMG.pepper },
-    { slug: "crates", label: "Crates", image: IMG.tower },
-    { slug: "trading", label: "Trading", image: IMG.pepper },
+    { slug: "loadout", label: "Loadout", image: IMG.rafflesia, imageFit: "contain" },
+    { slug: "pvp", label: "PvP", image: IMG.golem, imageFit: "contain" },
+    { slug: "endless", label: "Endless", image: IMG.beehive, imageFit: "contain" },
+    { slug: "early-game", label: "Early Game", image: IMG.farmer, imageFit: "contain" },
+    { slug: "money-farm", label: "Money Farm", image: IMG.moneyTree, imageFit: "contain" },
+    { slug: "crates", label: "Crates", image: IMG.pepper },
+    { slug: "trading", label: "Trading", image: IMG.rafflesia, imageFit: "contain" },
     { slug: "calculator", label: "Calculator", image: IMG.tower },
-    { slug: "guide", label: "Guide", image: IMG.sunflowers },
+    { slug: "guide", label: "Guide", image: IMG.pepper },
   ] satisfies NavCategory[],
 
   // ---- 首页各区块 ----

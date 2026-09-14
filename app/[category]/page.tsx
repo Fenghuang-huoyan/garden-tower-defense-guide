@@ -3,7 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { site } from "@/config/site.config";
-import { getDocsByCategory, getNavCategories, categoryLabel } from "@/lib/content";
+import { getDocsByCategory, getNavCategories, categoryLabel, categoryImageFit } from "@/lib/content";
 
 type Props = { params: Promise<{ category: string }> };
 
@@ -39,8 +39,14 @@ export default async function CategoryPage({ params }: Props) {
           <li key={d.slug}>
             <Link href={`/${d.category}/${d.slug}`} className="block h-full overflow-hidden rounded-2xl border border-b-4 border-[hsl(var(--border))] bg-[hsl(var(--card))] transition hover:-translate-y-0.5 hover:border-[hsl(var(--theme))]">
               {d.image && (
-                <div className="relative aspect-[16/9]">
-                  <Image src={d.image} alt="" fill sizes="(max-width: 640px) 100vw, 490px" className="object-cover" />
+                <div className={`relative aspect-[16/9] ${categoryImageFit(d.category) === "contain" ? "bg-[hsl(var(--theme))]/10 p-6" : ""}`}>
+                  <Image
+                    src={d.image}
+                    alt=""
+                    fill
+                    sizes="(max-width: 640px) 100vw, 490px"
+                    className={categoryImageFit(d.category) === "contain" ? "object-contain" : "object-cover"}
+                  />
                 </div>
               )}
               <div className="p-5">
