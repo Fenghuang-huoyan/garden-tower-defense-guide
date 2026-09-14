@@ -21,6 +21,8 @@ export const site = {
   logo: "/images/logo.png",
   // 上线前改成真实域名；本地开发用 localhost
   baseUrl: process.env.NEXT_PUBLIC_BASE_URL ?? "https://gardentowerdefenseguide.wiki",
+  // 隐私政策/服务条款页展示，也是隐私相关问题的联系方式
+  contactEmail: "asgharrulislam401@gmail.com",
 
   // ---- SEO 元数据 ----
   meta: {
