@@ -1,0 +1,17 @@
+{
+  "_comment": "出海游戏站巡检状态文件。每个站一个对象，新站上线时人工加一条同结构的记录。巡检定时任务每次运行只读这个文件，不需要单独告诉它新站的事。",
+  "sites": [
+    {
+      "name": "Garden Tower Defense Guide",
+      "domain": "gardentowerdefenseguide.wiki",
+      "launchDate": "2026-09-13",
+      "hasCodesPage": true,
+      "codesUrl": "https://gardentowerdefenseguide.wiki/codes",
+      "indexed": false,
+      "indexedDate": null,
+      "lastReviewDate": null,
+      "status": "observing"
+    }
+  ],
+  "log": []
+}
