@@ -1,9 +1,12 @@
 {
-  "_comment": "出海游戏站巡检状态文件。每个站一个对象，新站上线时人工加一条同结构的记录。巡检定时任务每次运行只读这个文件，不需要单独告诉它新站的事。",
+  "_comment": "出海游戏站舰队总花名册（不是单个站的运维文件，是所有站共用的注册表）。巡检定时任务每次只读这个文件，不需要单独告诉它新站的事；开新站前，先查 gameKeyword 有没有已经出现在 sites 里，避免选到重复/高度重叠的游戏词。这个文件放在 garden-tower-defense-guide 仓库里只是历史原因（第一个站建在这），新站不需要在自己仓库里再建一份。",
   "sites": [
     {
       "name": "Garden Tower Defense Guide",
+      "gameKeyword": "garden tower defense",
+      "platform": "Roblox",
       "domain": "gardentowerdefenseguide.wiki",
+      "repo": "Fenghuang-huoyan/garden-tower-defense-guide",
       "launchDate": "2026-09-13",
       "hasCodesPage": true,
       "codesUrl": "https://gardentowerdefenseguide.wiki/codes",
