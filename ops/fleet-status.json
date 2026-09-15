@@ -13,7 +13,17 @@
       "indexed": false,
       "indexedDate": null,
       "lastReviewDate": null,
-      "status": "observing"
+      "status": "observing",
+      "selectionScores": {
+        "_note": "选词时记录的五层判据打分，用于日后跨站横向对比、检验判据本身准不准，不是运营状态字段，巡检任务不应改它",
+        "layer1_reviewGrowth": "unconfirmed，未精确记录评测数/涨幅具体数字",
+        "layer2_domainSquatted": false,
+        "layer3_contentDepthIndependentIntents": 420,
+        "layer3_source": "Google 自动补全字母扩展，510 条原始词剥主词后 420 个独立修饰词",
+        "layer4_trends": "unconfirmed，未精确记录 Trends 具体数值",
+        "layer5_serpCompetition": "Fandom 已占 'garden tower defense wiki' 头部词（月访问 3.2 万），转攻 value/tier/best units 子需求线（该簇词量最大：best 73 + value 46 + unit 42），当时首页占位是一个 Google Sites 页面，判断为真空位",
+        "angle": "不抢头部词，主攻 value/tier/best units"
+      }
     },
     {
       "name": "King of Jade: Stone Tycoon Guide",
@@ -27,7 +37,17 @@
       "indexed": false,
       "indexedDate": null,
       "lastReviewDate": null,
-      "status": "observing"
+      "status": "observing",
+      "selectionScores": {
+        "_note": "选词时记录的五层判据打分，用于日后跨站横向对比、检验判据本身准不准，不是运营状态字段，巡检任务不应改它",
+        "layer1_reviewGrowth": "89 条评测，+21/天",
+        "layer2_domainSquatted": false,
+        "layer3_contentDepthIndependentIntents": 0,
+        "layer3_source": "游戏发售仅 4 天，Google 自动补全测不出任何数据（工具本身用 hollow knight 反测过是正常的，是这个游戏太新）",
+        "layer4_trends": "跳过，游戏太新无意义",
+        "layer5_serpCompetition": "WebSearch 直接搜'游戏名 wiki/guide'确认零竞品攻略站，真空位",
+        "angle": "游戏名本身即主词，无需绕开头部词"
+      }
     }
   ],
   "log": []
