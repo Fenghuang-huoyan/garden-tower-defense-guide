@@ -5,6 +5,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import { site } from "@/config/site.config";
 import { getAllDocs, getDoc, categoryLabel } from "@/lib/content";
+import { AdBanner } from "@/components/AdBanner";
 
 type Props = { params: Promise<{ category: string; slug: string }> };
 
@@ -48,6 +49,8 @@ export default async function DocPage({ params }: Props) {
           components={{ table: (props) => <div className="overflow-x-auto"><table {...props} /></div> }}
         />
       </article>
+
+      <AdBanner />
 
       {/* 每页公开列出来源。这是内容可信度的凭据，也是我们跟批量灌水站的分界线。 */}
       <section className="mt-12 rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--card))] p-5">
