@@ -50,5 +50,16 @@
       }
     }
   ],
-  "log": []
+  "log": [
+    {
+      "date": "2026-09-16",
+      "site": "Garden Tower Defense Guide",
+      "note": "仍未收录：site:gardentowerdefenseguide.wiki 未返回本站任何页面，只命中同名竞品域名 gardentowerdefense.wiki（无 guide）和 Fandom 官方 wiki，需继续观察。兑换码新鲜度核对本轮未能完成：本环境本轮 WebFetch 被出站策略拦截（尝试抓取本站 /codes 页、rocodes.gg、progameguides.com 均返回 EGRESS_BLOCKED），只能拿到 WebSearch 聚合摘要，聚合结果提到当前活码为 SLAY、POTION，但无法逐条比对本站 /codes 页实际内容，未做任何改动，留待人工核实或下一轮环境恢复后重试。"
+    },
+    {
+      "date": "2026-09-16",
+      "site": "King of Jade: Stone Tycoon Guide",
+      "note": "仍未收录：site:kingofjadeguide.wiki 无任何返回结果。无兑换码页（hasCodesPage=false），跳过码检查。本轮无变化。"
+    }
+  ]
 }
