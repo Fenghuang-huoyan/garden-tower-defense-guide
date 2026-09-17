@@ -48,6 +48,31 @@
         "layer5_serpCompetition": "WebSearch 直接搜'游戏名 wiki/guide'确认零竞品攻略站，真空位",
         "angle": "游戏名本身即主词，无需绕开头部词"
       }
+    },
+    {
+      "name": "Autopilot Simulator Guide",
+      "gameKeyword": "autopilot simulator",
+      "platform": "Roblox",
+      "domain": "autopilotsimulatorguide.wiki",
+      "repo": "Fenghuang-huoyan/autopilot-simulator-guide",
+      "launchDate": "2026-09-17",
+      "hasCodesPage": true,
+      "codesUrl": "https://autopilotsimulatorguide.wiki/codes",
+      "indexed": false,
+      "indexedDate": null,
+      "lastReviewDate": null,
+      "status": "observing",
+      "selectionScores": {
+        "_note": "选词时记录的五层判据打分，用于日后跨站横向对比、检验判据本身准不准，不是运营状态字段，巡检任务不应改它",
+        "layer0_marketLanguage": "无红旗——相关 YouTube 视频/频道全英文，车型欧美向；非 Steam appreviews 硬数据，仅代表未发现负面信号",
+        "layer1_reviewGrowth": "1.2K 在线，+27.1%/24h，处自身峰值 99%，仍在涨",
+        "layer2_domainSquatted": false,
+        "layer3_contentDepthIndependentIntents": 14,
+        "layer3_source": "Google 自动补全字母扩展，14 个独立搜索意图（codes/controls/fastest car/map/fsd说明/discord/tesla autopilot simulator等），刚过及格线",
+        "layer4_trends": "unconfirmed，未单独测 Google Trends",
+        "layer5_serpCompetition": "曾有 Fandom wiki 但已死链（'this wiki does not exist'），核实后确认无活跃竞品，真空位",
+        "angle": "深度刚过线但竞争为真空位；同批候选 Craft Food（深度155，8+竞品站）、Expedition Antarctica（深度96，Fandom已建全+域名被抢）因竞争过热淘汰——教训：深度分数越高越要多查几个竞品，不能只看一个对手站"
+      }
     }
   ],
   "log": [
