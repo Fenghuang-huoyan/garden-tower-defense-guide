@@ -73,6 +73,31 @@
         "layer5_serpCompetition": "曾有 Fandom wiki 但已死链（'this wiki does not exist'），核实后确认无活跃竞品，真空位",
         "angle": "深度刚过线但竞争为真空位；同批候选 Craft Food（深度155，8+竞品站）、Expedition Antarctica（深度96，Fandom已建全+域名被抢）因竞争过热淘汰——教训：深度分数越高越要多查几个竞品，不能只看一个对手站"
       }
+    },
+    {
+      "name": "Street Life Remastered Wiki",
+      "gameKeyword": "street life remastered",
+      "platform": "Roblox",
+      "domain": "streetliferemastered.wiki",
+      "repo": "Fenghuang-huoyan/street-life-remastered-guide",
+      "launchDate": "2026-09-20",
+      "hasCodesPage": true,
+      "codesUrl": "https://streetliferemastered.wiki/codes/street-life-remastered-codes",
+      "indexed": false,
+      "indexedDate": null,
+      "lastReviewDate": null,
+      "status": "observing",
+      "selectionScores": {
+        "_note": "选词时记录的五层判据打分，用于日后跨站横向对比、检验判据本身准不准，不是运营状态字段，巡检任务不应改它",
+        "layer0_marketLanguage": "无红旗——Roblox 无评测语言数据；YouTube 实测视频/频道标题与评论全英文，判断面向欧美区；官方 Discord 语言未逐条核实",
+        "layer1_reviewGrowth": "在线 2202（2026-09-19 交接文档记录）/3140（同日 API 复查），累计访问约 1.7 亿，收藏 163 万，2026-09-18 仍在更新",
+        "layer2_domainSquatted": false,
+        "layer3_contentDepthIndependentIntents": 68,
+        "layer3_source": "Google 自动补全字母扩展（带 roblox 后缀），68 个独立意图、33 个内容类：all gangs / all guns / best cars / best guns / best job / best crosshair / admin commands / codes，类型分散，不是 codes 单页陷阱",
+        "layer4_trends": "unconfirmed，未测 Google Trends",
+        "layer5_serpCompetition": "唯一 Fandom robloxstreetlife.fandom.com 记录的是老版 Streetlife（21 篇/活跃 0/最后编辑 2024-11-15，页面自称 in development）；搜索前排为 TikTok 话题页与 aayyy/earnaldo/games-manuals 薄博客，无专门 wiki",
+        "angle": "新版 Remastered 专门 wiki 的空位；不做 cheats/script；兑换码页如实写无官方可兑换码；所有玩法数字来自读过字幕的实测视频并标日期"
+      }
     }
   ],
   "log": [
