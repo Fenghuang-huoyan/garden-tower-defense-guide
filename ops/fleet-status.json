@@ -85,6 +85,21 @@
       "date": "2026-09-16",
       "site": "King of Jade: Stone Tycoon Guide",
       "note": "仍未收录：site:kingofjadeguide.wiki 无任何返回结果。无兑换码页（hasCodesPage=false），跳过码检查。本轮无变化。"
+    },
+    {
+      "date": "2026-09-19",
+      "site": "Garden Tower Defense Guide",
+      "note": "仍未收录：site:gardentowerdefenseguide.wiki 未返回本站任何页面，命中的仍是同名竞品 gardentowerdefense.wiki/.org/.info、Fandom 官方 wiki，与 9/16 一致。兑换码新鲜度：本轮用 WebSearch 查第三方聚合站（ProGameGuides/Destructoid/Beebom 等）摘要，当前活码仍是 SLAY、POTION（与 9/16 核对结果相同），未发现更新迹象；因本站未被收录、无法从搜索摘要里拿到本站 /codes 页自身内容做逐条比对，只能确认第三方口径本身无变化，未做任何改动。"
+    },
+    {
+      "date": "2026-09-19",
+      "site": "King of Jade: Stone Tycoon Guide",
+      "note": "仍未收录：site:kingofjadeguide.wiki 无任何返回结果（连竞品域名都没有）。无兑换码页，跳过码检查。本轮无变化。"
+    },
+    {
+      "date": "2026-09-19",
+      "site": "Autopilot Simulator Guide",
+      "note": "上线后首次巡检（launchDate 2026-09-17，距今仅 2 天）。未收录：site:autopilotsimulatorguide.wiki 无任何返回结果，符合预期。兑换码新鲜度：WebSearch 搜本站 codes 及 'Autopilot Simulator codes September 2026' 均未找到任何第三方码站给出这款游戏的具体码列表（搜索结果混入了 Airplane Simulator、Driving Simulator 等不相关游戏，以及无码信息的 Fandom 页面），本轮只拿到摘要级信息、且缺乏可比对的第三方码源，无法判断本站 /codes 页内容是否有差异，建议人工核实。"
     }
   ]
 }
