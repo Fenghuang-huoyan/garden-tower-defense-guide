@@ -10,6 +10,16 @@
  */
 export type NavCategory = { slug: string; label: string; image?: string; imageFit?: "cover" | "contain" };
 
+/**
+ * subLinks（可选）：卡片下方的二级预览链接，仿照对手站"分类卡片列 2-3 个具体子话题 +
+ * View all"的做法（2026-09-17 看竞品站 mansiontycoon.wiki 时发现，比只有一句话描述
+ * 更能给用户和 Google 具体入口）。不填就是老样式，不强制每张卡片都加。
+ */
+export type StartCard = {
+  number: string; title: string; description: string; href: string; image: string;
+  subLinks?: { label: string; href: string }[];
+};
+
 // ---- 图片（官方宣传图 + Fandom wiki 单位立绘，均已自托管到 public/，不热链）----
 // 3 张官方宣传图（风景/场景）+ 6 张单位渲染图（透明背景），共 9 张按内容相关性分配到
 // 16 个分类，避免只有 3 张图轮流复用导致的"到处重复"观感（2026-09-14 用户反馈后修）。
@@ -116,7 +126,7 @@ export const site = {
       { number: "2", title: "Active Codes", description: "Working codes with rewards and redemption steps.", href: "/codes", image: IMG.tower },
       { number: "3", title: "Tier List", description: "Every unit ranked, with the evidence behind each ranking.", href: "/tier-list", image: IMG.pepper },
       { number: "4", title: "Value List", description: "Current trading values for units and gamepasses.", href: "/values", image: IMG.sunflowers },
-    ],
+    ] as StartCard[],
   },
 
   aboutGame: {

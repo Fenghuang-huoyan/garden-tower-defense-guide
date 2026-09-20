@@ -104,3 +104,15 @@ npm run start   # 本地起生产服务
   每 3 天自动查收录/复盘节点/兑换码新鲜度，不需要登录。**多站扩展方式：新站上线在这个
   JSON 的 `sites` 数组加一条同结构记录即可，不要新建任务。** 详见知识库
   `Claude\项目\游戏站矩阵.md` 和交接文档
+- 2026-09-17：看了三个竞品站（mansiontycoon.wiki 商业化 fan wiki、craftfood.gg 数据
+  工具站、Expedition Antarctica 的 Fandom 社区 wiki）后，框架层加了一处通用改进——
+  `start.cards`（首页"从这里开始"卡片）新增可选字段 `subLinks`（`config/site.config.ts`
+  的 `StartCard` 类型），仿照对手站"卡片下面列 2-3 个具体子话题 + View all"的做法，
+  给用户和 Google 更多具体入口。**不填就是老样式，不强制每张卡片都加**，GTD/King of
+  Jade 两个已上线站没有改配置，本身不受影响，已跑 `npm run build` + 本地浏览器验证
+  首页渲染正常。第三站及以后配置 `start.cards` 时可以考虑加上。
+  同时确认 `aboutGame.stats` 这个已有字段（本来就是"Quick Facts"性质的信息块，不是
+  新东西）还可以再补全——对手站的 Quick Facts 表格常见字段是 Developer/Platform/
+  Released/Genre/Price，GTD 当前 `aboutGame.stats` 只填了 Developer/Platform/Genre 三项，
+  少了 Released（发售日期）和 Price（价格），新站配置时记得把这两项也填上，不是必须
+  但比现在完整。

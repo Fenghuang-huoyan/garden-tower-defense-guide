@@ -34,16 +34,27 @@ export default function Home() {
         <h2 className="mt-2 text-3xl font-bold">{start.title}</h2>
         <div className="mt-6 grid gap-5 sm:grid-cols-2">
           {start.cards.map((c) => (
-            <Link key={c.number} href={c.href} className="group overflow-hidden rounded-2xl border border-b-4 border-[hsl(var(--border))] bg-[hsl(var(--card))] transition hover:-translate-y-0.5 hover:border-[hsl(var(--theme))]">
-              <div className="relative aspect-[16/9] overflow-hidden">
-                <Image src={c.image} alt="" fill sizes="(max-width: 640px) 100vw, 490px" className="object-cover transition group-hover:scale-105" />
-                <span className="font-display absolute left-3 top-3 flex h-9 w-9 items-center justify-center rounded-full border-b-4 border-[hsl(var(--accent-shadow))] bg-[hsl(var(--accent))] font-bold text-[hsl(var(--accent-fg))]">{c.number}</span>
-              </div>
-              <div className="p-5">
-                <h3 className="text-lg font-bold">{c.title}</h3>
-                <p className="mt-1 text-sm text-[hsl(var(--muted))]">{c.description}</p>
-              </div>
-            </Link>
+            <div key={c.number} className="group overflow-hidden rounded-2xl border border-b-4 border-[hsl(var(--border))] bg-[hsl(var(--card))] transition hover:-translate-y-0.5 hover:border-[hsl(var(--theme))]">
+              <Link href={c.href} className="block">
+                <div className="relative aspect-[16/9] overflow-hidden">
+                  <Image src={c.image} alt="" fill sizes="(max-width: 640px) 100vw, 490px" className="object-cover transition group-hover:scale-105" />
+                  <span className="font-display absolute left-3 top-3 flex h-9 w-9 items-center justify-center rounded-full border-b-4 border-[hsl(var(--accent-shadow))] bg-[hsl(var(--accent))] font-bold text-[hsl(var(--accent-fg))]">{c.number}</span>
+                </div>
+                <div className="p-5 pb-3">
+                  <h3 className="text-lg font-bold">{c.title}</h3>
+                  <p className="mt-1 text-sm text-[hsl(var(--muted))]">{c.description}</p>
+                </div>
+              </Link>
+              {/* 二级预览链接（可选）：给用户和 Google 更多具体入口，不是每张卡片必填 */}
+              {c.subLinks && c.subLinks.length > 0 && (
+                <div className="flex flex-wrap gap-x-3 gap-y-1 px-5 pb-4 text-sm">
+                  {c.subLinks.map((sl) => (
+                    <Link key={sl.href} href={sl.href} className="text-[hsl(var(--theme))] hover:underline">{sl.label}</Link>
+                  ))}
+                  <Link href={c.href} className="font-bold text-[hsl(var(--muted))] hover:underline">View all →</Link>
+                </div>
+              )}
+            </div>
           ))}
         </div>
       </section>
