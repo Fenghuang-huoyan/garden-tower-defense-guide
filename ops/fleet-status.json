@@ -102,6 +102,26 @@
   ],
   "log": [
     {
+      "date": "2026-09-22",
+      "site": "King of Jade: Stone Tycoon Guide",
+      "note": "仍未收录：site:kingofjadeguide.wiki 无任何返回结果（连竞品域名都没有），与前两轮一致。无兑换码页，跳过码检查。本轮无变化。"
+    },
+    {
+      "date": "2026-09-22",
+      "site": "Autopilot Simulator Guide",
+      "note": "仍未收录：site:autopilotsimulatorguide.wiki 无任何返回结果，符合预期（上线仅 5 天）。兑换码新鲜度：WebSearch 搜本站 codes 及 'Autopilot Simulator codes September 2026' 依旧找不到任何第三方码站给出这款游戏本身的具体码列表（结果混入 Airplane Simulator、Cabin Crew Simulator 等不相关游戏），与 9/19 一致，本轮无新增信息，建议继续人工核实。"
+    },
+    {
+      "date": "2026-09-22",
+      "site": "Street Life Remastered Wiki",
+      "note": "上线后首次巡检（launchDate 2026-09-20，距今 2 天）。未收录：site:streetliferemastered.wiki 无任何返回结果，符合预期。兑换码新鲜度：WebSearch 搜本站 codes 及 'Street Life Remastered codes September 2026'，第三方来源（earnaldo.com 博客，称核对过游戏内描述、events API 与官方 Discord，9/12-9/26 更新窗口内也未出码）确认该游戏目前没有官方兑换码/兑换入口，市面所谓'codes'实为音乐/穿版素材 ID，不是可兑换奖励的码——这与本站 selectionScores 里记录的既定做法（codes 页如实写无官方可兑换码）一致，无需改动。本轮无实质变化。"
+    },
+    {
+      "date": "2026-09-22",
+      "site": "Garden Tower Defense Guide",
+      "note": "仍未收录：site:gardentowerdefenseguide.wiki 未返回本站任何页面，命中的仍是同名竞品域名（gardentowerdefense.org/.wiki/.info）和 Fandom 官方 wiki，与 9/16、9/19 一致。兑换码新鲜度：第三方聚合（Twinfinite/ProGameGuides/Destructoid/Beebom 等，均标注 September 2026）确认活码仍是 SLAY、POTION，与前两轮一致；但本轮 WebSearch 摘要里新出现一条本站前两轮巡检都没提到的码 SUNDIAL（据称给 250 Lucky Blocks，来自 Roblox Den 的摘要），无法确认是本轮才上线还是之前漏记，也因本站未被收录无法比对本站 /codes 页是否已收录该码——建议人工核实 SUNDIAL 是否有效并按需更新本站 /codes 页（未做任何改动）。"
+    },
+    {
       "date": "2026-09-16",
       "site": "Garden Tower Defense Guide",
       "note": "仍未收录：site:gardentowerdefenseguide.wiki 未返回本站任何页面，只命中同名竞品域名 gardentowerdefense.wiki（无 guide）和 Fandom 官方 wiki，需继续观察。兑换码新鲜度核对本轮未能完成：本环境本轮 WebFetch 被出站策略拦截（尝试抓取本站 /codes 页、rocodes.gg、progameguides.com 均返回 EGRESS_BLOCKED），只能拿到 WebSearch 聚合摘要，聚合结果提到当前活码为 SLAY、POTION，但无法逐条比对本站 /codes 页实际内容，未做任何改动，留待人工核实或下一轮环境恢复后重试。"
