@@ -83,8 +83,8 @@
       "launchDate": "2026-09-20",
       "hasCodesPage": true,
       "codesUrl": "https://streetliferemastered.wiki/codes/street-life-remastered-codes",
-      "indexed": false,
-      "indexedDate": null,
+      "indexed": true,
+      "indexedDate": "2026-09-25",
       "lastReviewDate": null,
       "status": "observing",
       "selectionScores": {
@@ -102,7 +102,22 @@
   ],
   "log": [
     {
-      "date": "2026-09-22",
+      "date": "2026-09-25",
+      "site": "Street Life Remastered Wiki",
+      "note": "首次查到收录：site:streetliferemastered.wiki 直接返回本站自身页面（标题 'Street Life Remastered Wiki — Money Methods, Gangs, Guns, Cars'），此前三轮（9/22 及更早）均无返回。indexed 由 false 改为 true，indexedDate 记为 2026-09-25，距 launchDate（9/20）仅 5 天。兑换码新鲜度：WebSearch 及 earnaldo.com 摘要仍确认游戏本身没有官方兑换码（9/12-9/26 的更新事件也未带出码），与本站既定做法（如实写无官方可兑换码）一致，未做任何改动。"
+    },
+    {
+      "date": "2026-09-25",
+      "site": "Garden Tower Defense Guide",
+      "note": "仍未收录：site:gardentowerdefenseguide.wiki 未返回本站任何页面，命中的仍是同名竞品域名（gardentowerdefense.org/.wiki/.info）和 Fandom 官方 wiki，与此前各轮一致。兑换码新鲜度：多个第三方聚合站（Beebom/RoCodes/ProGameGuides/Destructoid 等）本轮摘要一致确认当前活码仍是 SLAY、POTION，与上一轮相同；上轮（9/22）记录的疑似新码 SUNDIAL 本轮未在任何搜索摘要中再次出现，无法确认它是否真实存在过，暂按未确认处理，未做任何改动。"
+    },
+    {
+      "date": "2026-09-25",
+      "site": "Autopilot Simulator Guide",
+      "note": "仍未收录：site:autopilotsimulatorguide.wiki 无任何返回结果，符合预期。兑换码新鲜度：WebSearch 搜索本站及 'Autopilot Simulator codes September 2026' 依旧找不到针对这款游戏本身的第三方码列表（结果混入 Airplane Simulator、Driving Simulator、Cabin Crew Simulator 等不相关游戏），与此前多轮一致，本轮无新增信息，建议继续人工核实。"
+    },
+    {
+      "date": "2026-09-25",
       "site": "King of Jade: Stone Tycoon Guide",
       "note": "仍未收录：site:kingofjadeguide.wiki 无任何返回结果（连竞品域名都没有），与前两轮一致。无兑换码页，跳过码检查。本轮无变化。"
     },
