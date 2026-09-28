@@ -58,8 +58,8 @@
       "launchDate": "2026-09-17",
       "hasCodesPage": true,
       "codesUrl": "https://autopilotsimulatorguide.wiki/codes",
-      "indexed": false,
-      "indexedDate": null,
+      "indexed": true,
+      "indexedDate": "2026-09-28",
       "lastReviewDate": null,
       "status": "observing",
       "selectionScores": {
@@ -101,6 +101,26 @@
     }
   ],
   "log": [
+    {
+      "date": "2026-09-28",
+      "site": "Autopilot Simulator Guide",
+      "note": "首次查到收录：site:autopilotsimulatorguide.wiki 返回本站自身首页（标题 'Autopilot Simulator Guide — FSD, Controls, Codes'），此前多轮（9/19、9/22、9/25）均无返回。indexed 由 false 改为 true，indexedDate 记为 2026-09-28，距 launchDate（9/17）11 天。兑换码新鲜度：WebSearch 搜第三方聚合 'Autopilot Simulator codes September 2026' 依旧找不到针对本游戏本身的具体码列表（结果混入 Airplane Simulator/Driving Simulator/Cabin Crew Simulator 等不相关游戏），与此前多轮一致，本轮无新增信息，建议继续人工核实。"
+    },
+    {
+      "date": "2026-09-28",
+      "site": "Garden Tower Defense Guide",
+      "note": "仍未收录：site:gardentowerdefenseguide.wiki 未返回本站任何页面，命中的仍是同名竞品域名（gardentowerdefense.org/.wiki/.info）、Fandom 官方 wiki 及 Google Sites 官方 value list，与此前各轮一致。兑换码新鲜度：第三方聚合（Beebom/ProGameGuides/RoCodes/Destructoid 等，均标注 September 2026）确认活码仍是 SLAY、POTION，与前几轮一致；但本轮摘要里新出现一条此前未记录的码 TRIANGLE（据称给 500 Seeds），无法确认是否为新上线还是之前漏记，且因本站未被收录、无法比对本站 /codes 页是否已收录该码，建议人工核实 TRIANGLE 是否真实有效。上轮记录的疑似码 SUNDIAL 本轮仍未再次出现。未做任何改动。"
+    },
+    {
+      "date": "2026-09-28",
+      "site": "King of Jade: Stone Tycoon Guide",
+      "note": "仍未收录：site:kingofjadeguide.wiki 无任何返回结果（连竞品域名都没有）。无兑换码页，跳过码检查。本轮无变化。"
+    },
+    {
+      "date": "2026-09-28",
+      "site": "Street Life Remastered Wiki",
+      "note": "收录状态持续确认：site:streetliferemastered.wiki 正常返回本站多个页面（首页、Beginner Guide、Money Methods）。距 indexedDate（9/25）仅 3 天，远未到 8 周复盘阈值，暂不提醒复盘。兑换码新鲜度：WebSearch 及 earnaldo.com 等来源本轮再次确认该游戏没有官方兑换码/兑换入口，市面所谓 'codes' 仍是音乐/穿版素材 ID 而非可兑换奖励码，与本站既定做法（如实写无官方可兑换码）一致，未做任何改动。"
+    },
     {
       "date": "2026-09-25",
       "site": "Street Life Remastered Wiki",
