@@ -5,6 +5,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import { site } from "@/config/site.config";
 import { getAllDocs, getDoc, categoryLabel } from "@/lib/content";
+import { TradeCalculator } from "@/components/TradeCalculator";
 import { AdBanner } from "@/components/AdBanner";
 import { JsonLd, articleSchema, breadcrumbSchema } from "@/components/JsonLd";
 
@@ -22,6 +23,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: doc.title,
     description: doc.description,
     alternates: { canonical: `/${category}/${slug}` },
+    openGraph: {
+      title: doc.title, description: doc.description,
+      url: `${site.baseUrl}/${category}/${slug}`, type: "article",
+      siteName: site.siteName, images: [site.categories.find((entry) => entry.slug === category)?.image ?? site.hero.image.src],
+      ...(doc.updated ? { modifiedTime: doc.updated } : {}),
+    },
+    twitter: { card: "summary_large_image", title: doc.title,
+      description: doc.description, images: [site.categories.find((entry) => entry.slug === category)?.image ?? site.hero.image.src] },
   };
 }
 
@@ -55,7 +64,7 @@ export default async function DocPage({ params }: Props) {
         <MDXRemote
           source={doc.body}
           options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
-          components={{ table: (props) => <div className="overflow-x-auto"><table {...props} /></div> }}
+          components={{ TradeCalculator, table: (props) => <div className="overflow-x-auto"><table {...props} /></div> }}
         />
       </article>
 

@@ -114,8 +114,8 @@ export const site = {
       "Grow an army of 350+ plant units, defend your base from waves of enemies, and climb the leaderboard. Every guide here is checked against official sources and community data.",
     stats: ["350+ Plant Units", "Weekly Updates: Sat 13:00 UTC", "3.3M+ Community Members", "Roblox Tower Defense"],
     primaryCta: { label: "Start Beginner Guide", href: "/guide/garden-tower-defense-beginner-guide" },
-    secondaryCta: { label: "Check Active Codes", href: "/codes" },
-    tertiaryCta: { label: "Browse Tier List", href: "/tier-list" },
+    secondaryCta: { label: "Check Active Codes", href: "/codes/garden-tower-defense-codes" },
+    tertiaryCta: { label: "Browse Tier List", href: "/tier-list/garden-tower-defense-tier-list" },
   },
 
   start: {
@@ -123,9 +123,9 @@ export const site = {
     title: "Your Garden Tower Defense Journey",
     cards: [
       { number: "1", title: "Beginner Guide", description: "Controls, your first units and your first hour.", href: "/guide/garden-tower-defense-beginner-guide", image: IMG.sunflowers },
-      { number: "2", title: "Active Codes", description: "Working codes with rewards and redemption steps.", href: "/codes", image: IMG.tower },
-      { number: "3", title: "Tier List", description: "Every unit ranked, with the evidence behind each ranking.", href: "/tier-list", image: IMG.pepper },
-      { number: "4", title: "Value List", description: "Current trading values for units and gamepasses.", href: "/values", image: IMG.sunflowers },
+      { number: "2", title: "Active Codes", description: "Working codes with rewards and redemption steps.", href: "/codes/garden-tower-defense-codes", image: IMG.tower },
+      { number: "3", title: "Tier List", description: "Every unit ranked, with the evidence behind each ranking.", href: "/tier-list/garden-tower-defense-tier-list", image: IMG.pepper },
+      { number: "4", title: "Value List", description: "Dated community value scores, with source and limitations.", href: "/values/garden-tower-defense-value-list", image: IMG.sunflowers },
     ] as StartCard[],
   },
 
