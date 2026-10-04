@@ -1,6 +1,6 @@
-/** Displayed community Value scores, checked 2026-10-03. Not Seeds or completed-sale prices. */
+/** Displayed community Value scores, checked 2026-10-05. Not Seeds or completed-sale prices. */
 export const VALUE_SOURCE = "https://gardentowerdefensevalues.com";
-export const VALUE_CHECKED = "2026-10-03";
+export const VALUE_CHECKED = "2026-10-05";
 export const tradeItems = [
   { name: "Blossom Barrage", score: 11500, approximate: true },
   { name: "Shadestool", score: 4500, approximate: true },
