@@ -45,3 +45,19 @@ h1, h2, h3, .font-display {
 .btn-theme { background: hsl(var(--theme)); color: #fff; border-color: hsl(var(--theme-shadow)); }
 .btn-accent { background: hsl(var(--accent)); color: hsl(var(--accent-fg)); border-color: hsl(var(--accent-shadow)); }
 .btn-plain { background: hsl(var(--card)); color: hsl(var(--fg)); border: 1px solid hsl(var(--border)); border-bottom: 4px solid hsl(var(--border)); }
+
+/* Value tables scroll sideways on narrow screens. Cell text stays intact. */
+.table-scroll {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.table-scroll table {
+  width: max-content;
+  min-width: 100%;
+}
+.table-scroll th,
+.table-scroll td {
+  white-space: nowrap;
+}
