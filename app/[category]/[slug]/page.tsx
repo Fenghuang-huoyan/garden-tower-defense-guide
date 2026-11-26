@@ -41,7 +41,7 @@ export default async function DocPage({ params }: Props) {
   if (!doc) notFound();
 
   return (
-    <main className="mx-auto max-w-3xl px-4 py-12">
+    <main className="mx-auto max-w-5xl px-4 py-10">
       <JsonLd data={articleSchema(doc)} />
       <JsonLd
         data={breadcrumbSchema([
@@ -50,16 +50,16 @@ export default async function DocPage({ params }: Props) {
           { name: doc.title, path: `/${doc.category}/${doc.slug}` },
         ])}
       />
-      <nav className="text-sm text-[hsl(var(--muted))]">
+      <nav className="text-sm font-medium text-[hsl(var(--muted))]">
         <Link href="/" className="hover:underline">{site.siteName}</Link>
         {" / "}
         <Link href={`/${doc.category}`} className="hover:underline">{categoryLabel(doc.category)}</Link>
       </nav>
 
-      <h1 className="mt-2 text-3xl font-bold">{doc.title}</h1>
+      <h1 className="mt-2 text-3xl font-bold sm:text-4xl">{doc.title}</h1>
       {doc.updated && <p className="mt-2 text-sm text-[hsl(var(--muted))]">Last updated {doc.updated}</p>}
 
-      <article className="mt-8 space-y-4 leading-relaxed [&_h2]:mt-8 [&_h2]:text-xl [&_h2]:font-bold [&_li]:ml-5 [&_li]:list-disc [&_p]:text-[hsl(var(--fg))] [&_table]:w-full [&_table]:border-collapse [&_table]:text-sm [&_td]:border [&_td]:border-[hsl(var(--border))] [&_td]:px-3 [&_td]:py-2 [&_th]:border [&_th]:border-[hsl(var(--border))] [&_th]:bg-[hsl(var(--card))] [&_th]:px-3 [&_th]:py-2 [&_th]:text-left [&_th]:font-bold">
+      <article className="mt-8 space-y-4 leading-relaxed [&_h2]:mt-8 [&_h2]:max-w-3xl [&_h2]:text-xl [&_h2]:font-bold [&_li]:ml-5 [&_li]:max-w-3xl [&_li]:list-disc [&_p]:max-w-3xl [&_p]:text-[hsl(var(--fg))] [&_table]:w-full [&_table]:border-collapse [&_table]:text-sm [&_td]:border [&_td]:border-[hsl(var(--border))] [&_td]:px-3 [&_td]:py-2 [&_th]:border [&_th]:border-[hsl(var(--border))] [&_th]:bg-[hsl(var(--card))] [&_th]:px-3 [&_th]:py-2 [&_th]:text-left [&_th]:font-bold">
         {/* remark-gfm 负责把 Markdown 表格转成 <table>；外层横滑容器防止手机上撑破页面 */}
         <MDXRemote
           source={doc.body}
