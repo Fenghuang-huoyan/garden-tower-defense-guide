@@ -40,7 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <>
             <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
             <Script id="ga-init" strategy="afterInteractive">
-              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`}
+              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href]'):null;if(!a)return;var h=a.href||'';var p=a.getAttribute('data-aff-partner')||(h.indexOf('lootbar.com')!==-1?'lootbar':h.indexOf('eldorado.gg')!==-1?'eldorado':'');if(!p)return;gtag('event','affiliate_click',{partner:p,game:'garden-tower-defense',placement:a.getAttribute('data-aff-placement')||window.location.pathname,link_url:h});});`}
             </Script>
           </>
         )}

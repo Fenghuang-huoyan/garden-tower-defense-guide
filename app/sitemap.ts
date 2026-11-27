@@ -7,7 +7,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = site.baseUrl.replace(/\/$/, "");
   return [
     { url: `${base}/`, priority: 1 },
-    ...getNavCategories().map((c) => ({ url: `${base}/${c.slug}`, priority: 0.8 })),
+    ...getNavCategories()
+      .filter((c) => getAllDocs().filter((d) => d.category === c.slug).length > 1)
+      .map((c) => ({ url: `${base}/${c.slug}`, priority: 0.8 })),
     ...getAllDocs().map((d) => ({
       url: `${base}/${d.category}/${d.slug}`,
       lastModified: d.updated || undefined,

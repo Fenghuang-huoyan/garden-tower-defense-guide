@@ -16,10 +16,12 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category } = await params;
   const label = categoryLabel(category);
+  const docs = getDocsByCategory(category);
   return {
     title: `${site.gameName} ${label}`,
     description: `Every ${site.gameName} ${label.toLowerCase()} page, each one checked against official sources.`,
     alternates: { canonical: `/${category}` },
+    ...(docs.length <= 1 ? { robots: { index: false, follow: true } } : {}),
   };
 }
 

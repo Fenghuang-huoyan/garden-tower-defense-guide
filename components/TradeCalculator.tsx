@@ -348,21 +348,21 @@ export function TradeCalculator() {
               <a
                 href={eldoradoUrl}
                 target="_blank"
-                rel="sponsored noopener noreferrer"
+                rel="sponsored noopener"
+                data-aff-partner="eldorado"
+                data-aff-placement="gtd-trade-calculator"
                 className="inline-flex min-h-[42px] items-center gap-1.5 rounded-xl bg-[hsl(var(--theme))] px-4 py-2 text-xs font-extrabold text-white shadow-xs transition hover:brightness-105"
               >
-                <span>Check Verified Listings on Eldorado.gg</span>
+                <span>Check Listings on Eldorado.gg</span>
                 <span aria-hidden="true">↗</span>
               </a>
             ) : (
               <a
-                href={monetizationConfig.traderieReferenceUrl}
-                target="_blank"
-                rel="noopener noreferrer nofollow"
+                href="/values/garden-tower-defense-value-list"
                 className="inline-flex min-h-[42px] items-center gap-1.5 rounded-xl bg-[hsl(var(--theme))] px-4 py-2 text-xs font-extrabold text-white shadow-xs transition hover:brightness-105"
               >
-                <span>Cross-Check Traderie Listings</span>
-                <span aria-hidden="true">↗</span>
+                <span>Full Unit Value Tier Table</span>
+                <span aria-hidden="true">→</span>
               </a>
             )}
             <a
